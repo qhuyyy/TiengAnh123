@@ -4,9 +4,1044 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Tieng Anh 123</title>
 </head>
 <body>
-    <div>Hêloo</div>
+
+    
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="data:image/png;base64,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">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="search-bar">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-4">
+                                 
+                                <label>Đăng ký mua thẻ </label>
+                            </div>
+                            <div class="col-md-4">
+                                 
+                                <button type="button" class="dangnhap">
+                                    Đăng nhập
+                                </button>
+                            </div>
+                            <div class="col-md-4">                                
+                                <button type="button" class="dangkythanhvien">
+                                    Đăng ký thành viên
+                                </button>
+                            </div>
+                        </div> 
+                        <label>Hoặc đăng nhập bằng</label>
+                        <button type="button" class="btn btn-success">
+                            Button
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- Navbar -->
+        <div class="row">
+            <div class="col-md-2">
+                <button class="home-button"><i class="fa fa-home"></i></button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+            <div class="col-md-1">
+                 
+                <button type="button" class="btn btn-success">
+                    Button
+                </button>
+            </div>
+        </div>
+
+<!-- Slider -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" /><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>
+                    h3. Lorem ipsum dolor sit amet.
+                </h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                    <div class="col-md-4">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                    <div class="col-md-4">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                    <div class="col-md-4">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                    <div class="col-md-4">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                    <div class="col-md-4">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                    <div class="col-md-4">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>
+                            h3. Lorem ipsum dolor sit amet.
+                        </h3>
+                        <div class="card">
+                            <h5 class="card-header">
+                                Card title
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Card content
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                Card footer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>
+                            h3. Lorem ipsum dolor sit amet.
+                        </h3>
+                        <div class="card">
+                            <h5 class="card-header">
+                                Card title
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Card content
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                Card footer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>
+                            h3. Lorem ipsum dolor sit amet.
+                        </h3>
+                        <div class="card">
+                            <h5 class="card-header">
+                                Card title
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Card content
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                Card footer
+                            </div>
+                        </div>
+                    </div>
+                </div><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                        </div><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3>
+                                    h3. Lorem ipsum dolor sit amet.
+                                </h3>
+                                <ol>
+                                    <li class="list-item">
+                                        Lorem ipsum dolor sit amet
+                                    </li>
+                                    <li class="list-item">
+                                        Consectetur adipiscing elit
+                                    </li>
+                                    <li class="list-item">
+                                        Integer molestie lorem at massa
+                                    </li>
+                                    <li class="list-item">
+                                        Facilisis in pretium nisl aliquet
+                                    </li>
+                                    <li class="list-item">
+                                        Nulla volutpat aliquam velit
+                                    </li>
+                                    <li class="list-item">
+                                        Faucibus porta lacus fringilla vel
+                                    </li>
+                                    <li class="list-item">
+                                        Aenean sit amet erat nunc
+                                    </li>
+                                    <li class="list-item">
+                                        Eget porttitor lorem
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <h3>
+                                    h3. Lorem ipsum dolor sit amet.
+                                </h3>
+                                <ol>
+                                    <li class="list-item">
+                                        Lorem ipsum dolor sit amet
+                                    </li>
+                                    <li class="list-item">
+                                        Consectetur adipiscing elit
+                                    </li>
+                                    <li class="list-item">
+                                        Integer molestie lorem at massa
+                                    </li>
+                                    <li class="list-item">
+                                        Facilisis in pretium nisl aliquet
+                                    </li>
+                                    <li class="list-item">
+                                        Nulla volutpat aliquam velit
+                                    </li>
+                                    <li class="list-item">
+                                        Faucibus porta lacus fringilla vel
+                                    </li>
+                                    <li class="list-item">
+                                        Aenean sit amet erat nunc
+                                    </li>
+                                    <li class="list-item">
+                                        Eget porttitor lorem
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <h3>
+                                    h3. Lorem ipsum dolor sit amet.
+                                </h3>
+                                <ol>
+                                    <li class="list-item">
+                                        Lorem ipsum dolor sit amet
+                                    </li>
+                                    <li class="list-item">
+                                        Consectetur adipiscing elit
+                                    </li>
+                                    <li class="list-item">
+                                        Integer molestie lorem at massa
+                                    </li>
+                                    <li class="list-item">
+                                        Facilisis in pretium nisl aliquet
+                                    </li>
+                                    <li class="list-item">
+                                        Nulla volutpat aliquam velit
+                                    </li>
+                                    <li class="list-item">
+                                        Faucibus porta lacus fringilla vel
+                                    </li>
+                                    <li class="list-item">
+                                        Aenean sit amet erat nunc
+                                    </li>
+                                    <li class="list-item">
+                                        Eget porttitor lorem
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <h5 class="card-header">
+                                        Card title
+                                    </h5>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Card content
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        Card footer
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                            </div>
+                        </div><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                <div class="card">
+                                    <h5 class="card-header">
+                                        Card title
+                                    </h5>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Card content
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        Card footer
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                <div class="card">
+                                    <h5 class="card-header">
+                                        Card title
+                                    </h5>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Card content
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        Card footer
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                <h3>
+                                    h3. Lorem ipsum dolor sit amet.
+                                </h3> 
+                                <button type="button" class="btn btn-success">
+                                    Button
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>
+                                    h3. Lorem ipsum dolor sit amet.
+                                </h3><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4">
+                                         
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>
+                                    h3. Lorem ipsum dolor sit amet.
+                                </h3>
+                                <h3>
+                                    h3. Lorem ipsum dolor sit amet.
+                                </h3>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <h5 class="card-header">
+                                                Card title
+                                            </h5>
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Card content
+                                                </p>
+                                            </div>
+                                            <div class="card-footer">
+                                                Card footer
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <h5 class="card-header">
+                                                Card title
+                                            </h5>
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Card content
+                                                </p>
+                                            </div>
+                                            <div class="card-footer">
+                                                Card footer
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <h5 class="card-header">
+                                                Card title
+                                            </h5>
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Card content
+                                                </p>
+                                            </div>
+                                            <div class="card-footer">
+                                                Card footer
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <h5 class="card-header">
+                                                Card title
+                                            </h5>
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Card content
+                                                </p>
+                                            </div>
+                                            <div class="card-footer">
+                                                Card footer
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <h5 class="card-header">
+                                                Card title
+                                            </h5>
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Card content
+                                                </p>
+                                            </div>
+                                            <div class="card-footer">
+                                                Card footer
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <h5 class="card-header">
+                                                Card title
+                                            </h5>
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Card content
+                                                </p>
+                                            </div>
+                                            <div class="card-footer">
+                                                Card footer
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                            </div>
+                                        </div><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>
+                                            h3. Lorem ipsum dolor sit amet.
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img class="card-img-top" alt="Bootstrap Thumbnail First" src="https://www.layoutit.com/img/people-q-c-600-200-1.jpg" />
+                                            <div class="card-block">
+                                                <h5 class="card-title">
+                                                    Card title
+                                                </h5>
+                                                <p class="card-text">
+                                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                                </p>
+                                                <p>
+                                                    <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img class="card-img-top" alt="Bootstrap Thumbnail Second" src="https://www.layoutit.com/img/city-q-c-600-200-1.jpg" />
+                                            <div class="card-block">
+                                                <h5 class="card-title">
+                                                    Card title
+                                                </h5>
+                                                <p class="card-text">
+                                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                                </p>
+                                                <p>
+                                                    <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img class="card-img-top" alt="Bootstrap Thumbnail Third" src="https://www.layoutit.com/img/sports-q-c-600-200-1.jpg" />
+                                            <div class="card-block">
+                                                <h5 class="card-title">
+                                                    Card title
+                                                </h5>
+                                                <p class="card-text">
+                                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                                </p>
+                                                <p>
+                                                    <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                                        </p> 
+                                        <button type="button" class="btn btn-success">
+                                            Button
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" /><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul>
+                            <li class="list-item">
+                                Lorem ipsum dolor sit amet
+                            </li>
+                            <li class="list-item">
+                                Consectetur adipiscing elit
+                            </li>
+                            <li class="list-item">
+                                Integer molestie lorem at massa
+                            </li>
+                            <li class="list-item">
+                                Facilisis in pretium nisl aliquet
+                            </li>
+                            <li class="list-item">
+                                Nulla volutpat aliquam velit
+                            </li>
+                            <li class="list-item">
+                                Faucibus porta lacus fringilla vel
+                            </li>
+                            <li class="list-item">
+                                Aenean sit amet erat nunc
+                            </li>
+                            <li class="list-item">
+                                Eget porttitor lorem
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ol>
+                            <li class="list-item">
+                                Lorem ipsum dolor sit amet
+                            </li>
+                            <li class="list-item">
+                                Consectetur adipiscing elit
+                            </li>
+                            <li class="list-item">
+                                Integer molestie lorem at massa
+                            </li>
+                            <li class="list-item">
+                                Facilisis in pretium nisl aliquet
+                            </li>
+                            <li class="list-item">
+                                Nulla volutpat aliquam velit
+                            </li>
+                            <li class="list-item">
+                                Faucibus porta lacus fringilla vel
+                            </li>
+                            <li class="list-item">
+                                Aenean sit amet erat nunc
+                            </li>
+                            <li class="list-item">
+                                Eget porttitor lorem
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-2">
+                        <ol>
+                            <li class="list-item">
+                                Lorem ipsum dolor sit amet
+                            </li>
+                            <li class="list-item">
+                                Consectetur adipiscing elit
+                            </li>
+                            <li class="list-item">
+                                Integer molestie lorem at massa
+                            </li>
+                            <li class="list-item">
+                                Facilisis in pretium nisl aliquet
+                            </li>
+                            <li class="list-item">
+                                Nulla volutpat aliquam velit
+                            </li>
+                            <li class="list-item">
+                                Faucibus porta lacus fringilla vel
+                            </li>
+                            <li class="list-item">
+                                Aenean sit amet erat nunc
+                            </li>
+                            <li class="list-item">
+                                Eget porttitor lorem
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-2">
+                        <ol>
+                            <li class="list-item">
+                                Lorem ipsum dolor sit amet
+                            </li>
+                            <li class="list-item">
+                                Consectetur adipiscing elit
+                            </li>
+                            <li class="list-item">
+                                Integer molestie lorem at massa
+                            </li>
+                            <li class="list-item">
+                                Facilisis in pretium nisl aliquet
+                            </li>
+                            <li class="list-item">
+                                Nulla volutpat aliquam velit
+                            </li>
+                            <li class="list-item">
+                                Faucibus porta lacus fringilla vel
+                            </li>
+                            <li class="list-item">
+                                Aenean sit amet erat nunc
+                            </li>
+                            <li class="list-item">
+                                Eget porttitor lorem
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-2">
+                        <ol>
+                            <li class="list-item">
+                                Lorem ipsum dolor sit amet
+                            </li>
+                            <li class="list-item">
+                                Consectetur adipiscing elit
+                            </li>
+                            <li class="list-item">
+                                Integer molestie lorem at massa
+                            </li>
+                            <li class="list-item">
+                                Facilisis in pretium nisl aliquet
+                            </li>
+                            <li class="list-item">
+                                Nulla volutpat aliquam velit
+                            </li>
+                            <li class="list-item">
+                                Faucibus porta lacus fringilla vel
+                            </li>
+                            <li class="list-item">
+                                Aenean sit amet erat nunc
+                            </li>
+                            <li class="list-item">
+                                Eget porttitor lorem
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>
+                                    h3. Lorem ipsum dolor sit amet.
+                                </h3>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>
+                                    h3. Lorem ipsum dolor sit amet.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
